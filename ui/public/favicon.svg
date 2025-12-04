@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle with gradient -->
+  <circle cx="50" cy="50" r="48" fill="url(#brainGradient)" />
+  
+  <!-- Brain icon (simplified lucide-react Brain icon) -->
+  <g transform="translate(50, 50)" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left hemisphere -->
+    <path d="M -15,-20 Q -25,-20 -25,-10 Q -25,0 -25,5 Q -25,15 -15,18 Q -10,20 -5,18" />
+    <!-- Right hemisphere -->
+    <path d="M 15,-20 Q 25,-20 25,-10 Q 25,0 25,5 Q 25,15 15,18 Q 10,20 5,18" />
+    <!-- Top connection -->
+    <path d="M -15,-20 Q 0,-25 15,-20" />
+    <!-- Bottom connection -->
+    <path d="M -5,18 Q 0,19 5,18" />
+    <!-- Left folds -->
+    <path d="M -20,-8 Q -18,-5 -20,-2" />
+    <path d="M -20,2 Q -18,5 -20,8" />
+    <!-- Right folds -->
+    <path d="M 20,-8 Q 18,-5 20,-2" />
+    <path d="M 20,2 Q 18,5 20,8" />
+    <!-- Center fold -->
+    <path d="M 0,-18 L 0,15" />
+  </g>
+</svg>

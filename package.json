@@ -1,0 +1,32 @@
+{
+  "name": "pharma-agentic-ai",
+  "version": "1.0.0",
+  "description": "AI-powered pharmaceutical intelligence platform",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+    "frontend": "cd ui && npm run dev",
+    "build": "cd ui && npm run build",
+    "test": "cd backend && python -m pytest",
+    "docker:build": "docker build -t pharma-agentic-ai .",
+    "docker:run": "docker run -p 8000:8000 pharma-agentic-ai"
+  },
+  "keywords": [
+    "pharmaceutical",
+    "ai",
+    "agents",
+    "intelligence",
+    "iqvia",
+    "patents",
+    "clinical-trials"
+  ],
+  "author": "PharmaAI Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "supabase": "^2.54.11"
+  }
+}
