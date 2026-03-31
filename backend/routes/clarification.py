@@ -10,7 +10,7 @@ load_dotenv()
 
 # Create Blueprint
 clarification_bp = Blueprint('clarification', __name__)
-clarification_bp.secret_key = os.getenv("FLASK_SECRET_KEY", "pharma-ai-secret-key-2024")
+clarification_bp.secret_key = os.getenv("FLASK_SECRET_KEY", "change-me-in-env")
 
 # Initialize LLM
 llm = LLM(

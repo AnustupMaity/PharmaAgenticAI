@@ -774,7 +774,7 @@ class IQVIAQueryHelper:
 
 def create_database(db_path: str = "mock_iqvia.db", echo: bool = False):
     """Create and initialize the database"""
-    db_url = "postgresql://postgres:Arpon2022@db.lvvcipyrlorjlddiugec.supabase.co:5432/postgres"
+    db_url = os.getenv("DATABASE_URL", f"sqlite:///{db_path}")
     engine = create_engine(db_url, echo=echo)
     
     try:

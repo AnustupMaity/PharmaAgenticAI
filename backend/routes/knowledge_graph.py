@@ -31,14 +31,14 @@ model = genai.GenerativeModel(os.getenv("GEMINI_MODEL", "gemini-2.0-flash-exp"))
 # Neo4j Driver
 driver = None
 
-uri = "neo4j://bdfdfbd4.databases.neo4j.io"
-user = "neo4j"
-password = "FdNtGQZ77BnV1MMtOMZfCejyfhhLM50OMiitVkjlv0U"
-
 def get_neo4j_driver():
     global driver
     if driver is None:
-        driver = GraphDatabase.driver(uri, auth=(user, password), ssl_context=ssl_context)
+        driver = GraphDatabase.driver(
+            NEO4J_URI,
+            auth=(NEO4J_USERNAME, NEO4J_PASSWORD),
+            ssl_context=ssl_context,
+        )
         driver.verify_connectivity()
     return driver
 
